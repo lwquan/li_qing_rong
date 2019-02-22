@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+<link rel="stylesheet" href="../assets/css/zpui.css"/>
+<link rel="stylesheet" href="../assets/css/all.css"/>
+<script src="../assets/js/page.js"></script>
+
+    <title> 首页 </title>
+    <style>
+        .weui-grid {
+            width: 2.193333rem;
+            height: 1.7rem;
+            background-color: #ffffff;
+            border-radius: 0.1rem;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="page-hd">
+        <div class="header">
+    <div class="header-left">
+        <a href="javascript:history.go(-1)" class="left-arrow"></a>
+    </div>
+    <div class="header-title">首页</div>
+    <div class="header-right">
+        <div class="right_menu">
+            
+        </div>
+    </div>
+</div>
+    </div>
+    <div class="page-bd">
+        <!-- 页面内容-->
+        <div class="weui-cells mt0" style="background-color: transparent;">
+            <div class="weui-cell home-hd">
+                <div class="weui-cell__bd">
+                    <p class="fs30">~小情调天使~</p>
+                    <p class="mt10">ID：<span>2563</span></p>
+                    <p class="mt5">等级：<span>二星会员</span></p>
+                    <p class="weui-flex mt5" style="position: relative;">推荐码：<span>451211221</span>
+                        <a href="#" class="weui-btn weui-btn_plain-default fs24 ml15 mr20">复制</a>
+                        <img src="../assets/images/xsm.gif" alt="" class="xsm-style">
+                    </p>
+                </div>
+                <div class="weui-cell__ft" style="color: #3d3d3d;">
+                    <a href="会员设置.html" class="weui-flex mb10" style="align-items: center;"><i class="icon_set"></i><span class="ml5">设置</span></a>
+                    <a href="帮助.html"  class="weui-flex" style="align-items: center;"><i class="icon_bz"></i><span class="ml5">帮助</span></a>
+                </div>
+            </div>
+            <div class="weui-cell mt20 bg-fff">
+                <div class="weui-cell__hd" style="min-width: .6rem;">
+                    <span>公告：</span>
+                </div>
+                <div class="weui-cell__bd" style="overflow: hidden;white-space: nowrap;text-overflow:ellipsis;">
+                    <p  class="w100" style="overflow: hidden;white-space: nowrap;text-overflow:ellipsis;">欢迎登录本平台，如在使用过程中有问题可咨询我们！</p>
+                </div>
+            </div>
+            <div class="weui-grids pd20" style="background-color: transparent;display: flex;flex-wrap: wrap;justify-content: space-around;">
+                <a href="申请升级.html" class="weui-grid js_grid mb30">
+                    <div class="weui-grid__icon img115">
+                        <img src="../assets/images/icon_5.png" alt="">
+                    </div>
+                    <p class="weui-grid__label fs30 mt0">
+                        晋升申请
+                    </p>
+                </a>
+                <a href="审核升级.html" class="weui-grid js_grid mb30">
+                    <div class="weui-grid__icon img115">
+                        <img src="../assets/images/icon_6.png" alt="">
+                    </div>
+                    <p class="weui-grid__label fs30 mt0">
+                        晋升审核
+                    </p>
+                </a>
+                <a href="帮助注册.html" class="weui-grid js_grid">
+                    <div class="weui-grid__icon img115">
+                        <img src="../assets/images/icon_7.png" alt="">
+                    </div>
+                    <p class="weui-grid__label fs30 mt0">
+                        帮助注册
+                    </p>
+                </a>
+                <a href="我的团队.html" class="weui-grid js_grid">
+                    <div class="weui-grid__icon img115">
+                        <img src="../assets/images/icon_8.png" alt="">
+                    </div>
+                    <p class="weui-grid__label fs30 mt0">
+                        我的团队
+                    </p>
+                </a>
+            </div>
+        </div>
+        <div class="weui-cells mt0 mb30">
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <span>客服</span>
+                </div>
+                <div class="weui-cell__ft">
+                    <span style="color: #696969;">526542114</span>
+                </div>
+            </div>
+            <a href="公告.html" class="weui-cell weui-cell_access">
+                <div class="weui-cell__bd">
+                    <span>公告</span>
+                </div>
+                <div class="weui-cell__ft">
+                </div>
+            </a>
+            <a href="提交投诉.html" class="weui-cell weui-cell_access">
+                <div class="weui-cell__bd">
+                    <span>我要投诉</span>
+                </div>
+                <div class="weui-cell__ft">
+                </div>
+            </a>
+            <a href="登录.html" class="weui-cell weui-cell_access">
+                <div class="weui-cell__bd">
+                    <span>退出登录</span>
+                </div>
+                <div class="weui-cell__ft">
+                </div>
+            </a>
+        </div>
+    </div>
+</div>..
+<script src="../assets/js/lib/jquery-2.1.4.js"></script>
+<script src="../assets/js/jquery-weui.min.js"></script>
+<script>
+    
+// 举报，加入黑名单
+$(function () {
+    $(".header-right").on("click", ".more_icon", function (e) {
+        $(".right_menu").slideToggle(200);
+    })
+    $(document).bind("click", function (e) {
+        var flas = $(".right_menu").css("display");
+        if (flas === "block") {
+            if ($(e.target).closest(".header-right").length === 0) {
+                $(".right_menu").slideToggle(200);
+            }
+        }
+
+    });
+
+    $("#report").on("click", function () {
+        $.actions({
+            onClose: function () {
+                console.log("close");
+            },
+            actions: [
+                {
+                    text: "淫秽色情",
+                    onClick: function () {
+                        $.alert("举报内容‘淫秽色情’", "举报已提交");
+                    }
+                },
+                {
+                    text: "政治反动",
+                    onClick: function () {
+                        $.alert("举报内容‘政治反动’", "举报已提交");
+                    }
+                },
+                {
+                    text: "恶意谩骂",
+                    onClick: function () {
+                        $.alert("举报内容‘恶意谩骂’", "举报已提交");
+                    }
+                },
+                {
+                    text: "违法犯罪",
+                    onClick: function () {
+                        $.alert("举报内容‘违法犯罪’", "举报已提交");
+                    }
+                },
+                {
+                    text: "虚假信息",
+                    onClick: function () {
+                        $.alert("举报内容‘虚假信息’", "举报已提交");
+                    }
+                },
+                {
+                    text: "其他",
+                    onClick: function () {
+                        $.alert("举报内容‘其他’", "举报已提交");
+                    }
+                }
+            ]
+        });
+    })
+
+    $("#blacklist").on("click", function () {
+        $.confirm({
+            title: '加入黑名单',
+            text: '你将不再收到对方发布的任何消息',
+            onOK: function () {
+                //点击确认
+            },
+            onCancel: function () {
+            }
+        });
+    })
+
+})
+</script>
+<script>
+    $(function () {
+        // 切换密码框是否可见
+        $(".input_password").on('click', '.eye', function () {
+            var $this = $(this);
+            if ($this.hasClass('close')) {
+                $this.removeClass('close');
+                $this.parents('.input_password').find('input').attr('type', 'password');
+            } else {
+                $this.addClass('close');
+                $this.parents('.input_password').find('input').attr('type', 'text');
+            }
+        });
+    });
+</script>
+</body>
+</html>

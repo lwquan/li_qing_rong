@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+<link rel="stylesheet" href="../assets/css/zpui.css"/>
+<link rel="stylesheet" href="../assets/css/all.css"/>
+<script src="../assets/js/page.js"></script>
+
+    <title> 帮助注册 </title>
+    <style>
+        .border-after_none:after {
+            border: none!important;
+        }
+        .weui-label {
+            width: 1rem!important;
+        }
+        .weui-agree__checkbox:checked:before {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="page-hd">
+        <div class="header">
+    <div class="header-left">
+        <a href="javascript:history.go(-1)" class="left-arrow"></a>
+    </div>
+    <div class="header-title">帮助注册</div>
+    <div class="header-right">
+        <div class="right_menu">
+            
+        </div>
+    </div>
+</div>
+    </div>
+    <div class="page-bd">
+        <!-- 页面内容-->
+        <div class="weui-cells bg-fff">
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label class="weui-label">推荐码</label>
+                </div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input phone_input" placeholder="请输入推荐码" type="text">
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label class="weui-label">手机号</label>
+                </div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input phone_input" placeholder="请输入手机号" type="text">
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label class="weui-label">微信号</label>
+                </div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input phone_input" placeholder="请输入微信号" type="text">
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label class="weui-label">昵称</label>
+                </div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input phone_input" placeholder="请输入昵称" type="text">
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label class="weui-label">登录密码</label>
+                </div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input phone_input" placeholder="请输入登录密码" type="password">
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label class="weui-label">确认密码</label>
+                </div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input phone_input" placeholder="请输入确认密码" type="password">
+                </div>
+            </div>
+        </div>
+        <label for="weuiAgree" class="weui-agree pt40 pb0">
+            <input id="weuiAgree" type="checkbox" class="weui-agree__checkbox">
+            <span class="weui-agree__text">
+                我已详细阅读并同意<a href="javascript:void(0);" class="color1">服务条款</a>
+            </span>
+        </label>
+        <div class="weui-btn-area">
+            <a href="登录.html" class="weui-btn weui-btn_primary bg-danger">立即注册</a>
+        </div>
+        <div class="fixed_style1">
+            <a href="首页.html" class="weui-btn weui-btn_plain-primary weui-btn_class1">首页</a>
+        </div>
+
+    </div>
+</div>
+<script src="../assets/js/lib/jquery-2.1.4.js"></script>
+<script src="../assets/js/jquery-weui.min.js"></script>
+<script>
+    
+// 举报，加入黑名单
+$(function () {
+    $(".header-right").on("click", ".more_icon", function (e) {
+        $(".right_menu").slideToggle(200);
+    })
+    $(document).bind("click", function (e) {
+        var flas = $(".right_menu").css("display");
+        if (flas === "block") {
+            if ($(e.target).closest(".header-right").length === 0) {
+                $(".right_menu").slideToggle(200);
+            }
+        }
+
+    });
+
+    $("#report").on("click", function () {
+        $.actions({
+            onClose: function () {
+                console.log("close");
+            },
+            actions: [
+                {
+                    text: "淫秽色情",
+                    onClick: function () {
+                        $.alert("举报内容‘淫秽色情’", "举报已提交");
+                    }
+                },
+                {
+                    text: "政治反动",
+                    onClick: function () {
+                        $.alert("举报内容‘政治反动’", "举报已提交");
+                    }
+                },
+                {
+                    text: "恶意谩骂",
+                    onClick: function () {
+                        $.alert("举报内容‘恶意谩骂’", "举报已提交");
+                    }
+                },
+                {
+                    text: "违法犯罪",
+                    onClick: function () {
+                        $.alert("举报内容‘违法犯罪’", "举报已提交");
+                    }
+                },
+                {
+                    text: "虚假信息",
+                    onClick: function () {
+                        $.alert("举报内容‘虚假信息’", "举报已提交");
+                    }
+                },
+                {
+                    text: "其他",
+                    onClick: function () {
+                        $.alert("举报内容‘其他’", "举报已提交");
+                    }
+                }
+            ]
+        });
+    })
+
+    $("#blacklist").on("click", function () {
+        $.confirm({
+            title: '加入黑名单',
+            text: '你将不再收到对方发布的任何消息',
+            onOK: function () {
+                //点击确认
+            },
+            onCancel: function () {
+            }
+        });
+    })
+
+})
+</script>
+<script>
+
+</script>
+</body>
+</html>

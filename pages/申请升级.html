@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+<link rel="stylesheet" href="../assets/css/zpui.css"/>
+<link rel="stylesheet" href="../assets/css/all.css"/>
+<script src="../assets/js/page.js"></script>
+
+    <title> 申请升级 </title>
+    <style>
+        .weui-cells_checkbox .weui-icon-checked:before {
+            font-size: 18px!important;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="page-hd">
+        <div class="header">
+    <div class="header-left">
+        <a href="javascript:history.go(-1)" class="left-arrow"></a>
+    </div>
+    <div class="header-title">申请升级</div>
+    <div class="header-right">
+        <div class="right_menu">
+            
+        </div>
+    </div>
+</div>
+    </div>
+    <div class="page-bd">
+        <!-- 页面内容-->
+        <div class="weui-cells pd30 mt0 border-after_none" style="background: none;">
+            <div class="weui-cell bg-fff border-radius15 mb20" style="flex-flow: column;align-items: baseline;">
+                <div class="weui-cell__bd w100">
+                    <p>您当前的团队：<span>3人</span></p>
+                    <p class="mt30">您当前的等级：<span>一星会员</span></p>
+                    <p class="mt30">您可申请升级的等级：<span>二星会员</span></p>
+                    <div class="weui-cell pd0 mt30 border-before_none">
+                        <div class="weui-cell_hd">
+                            <span>选择提货方式：</span>
+                        </div>
+                        <div class="weui-cell_bd" style="flex: 1;">
+                            <div class="weui-cells weui-cells_checkbox border-none weui-flex mt0">
+                                <label class="weui-cell weui-check__label border-before_none pd0" for="s11">
+                                    <div class="weui-cell__hd pr0">
+                                        <input type="radio" class="weui-check" name="radio1" id="s11" checked="checked" data-index="1">
+                                        <i class="weui-icon-checked"></i>
+                                    </div>
+                                    <div class="weui-cell__bd">
+                                        <p>快递</p>
+                                    </div>
+                                </label>
+                                <label class="weui-cell weui-check__label border-before_none pd0 pl35" for="s12">
+                                    <div class="weui-cell__hd pr0">
+                                        <input type="radio" name="radio1" class="weui-check" id="s12" data-index="2">
+                                        <i class="weui-icon-checked"></i>
+                                    </div>
+                                    <div class="weui-cell__bd">
+                                        <p>自提</p>
+                                    </div>
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="ti-type">
+                        <div class="ti-type_ctn" style="display: none;">
+                            <div class="weui-cell pd0 mt30 border-before_none">
+                                <div class="weui-cell_hd">
+                                    <span>收货人姓名：</span>
+                                </div>
+                                <div class="weui-cell_bd" style="flex: 1;">
+                                    <input type="text" placeholder="请输入收货人姓名" class="weui-input w100">
+                                </div>
+                            </div>
+                            <div class="weui-cell pd0 mt30 border-before_none">
+                                <div class="weui-cell_hd">
+                                    <span>收货人电话：</span>
+                                </div>
+                                <div class="weui-cell_bd" style="flex: 1;">
+                                    <input type="tel" placeholder="请输入收货人电话" class="weui-input w100">
+                                </div>
+                            </div>
+                            <div class="weui-cell pd0 mt30 border-before_none">
+                                <div class="weui-cell_hd">
+                                    <span>收货人地址：</span>
+                                </div>
+                                <div class="weui-cell_bd" style="flex: 1;">
+                                    <input type="text" placeholder="请输入收货人地址" class="weui-input w100">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="weui-btn_class1 border-radius10 mt20" style="background-color: #ff8101;color: #ffffff;" onclick="$('.ti-type_ctn').show();">更改收货地址</p>
+                    </div>
+                    <p class="mt20">是否提交申请?</p>
+                </div>
+            </div>
+        </div>
+        <div class="weui-btn-area mt0">
+            <a href="首页.html" class="weui-btn weui-btn_primary bg-danger">提交申请</a>
+        </div>
+        <div class="fixed_style1" style="bottom: 1rem;">
+            <a href="首页.html" class="weui-btn weui-btn_plain-primary weui-btn_class1">首页</a>
+        </div>
+        <div class="bottom-btn-wrap">
+            <div class="bottom-btn">
+                <a href="历史订单.html" class="weui-btn weui-btn_primary">过往历史</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/js/lib/jquery-2.1.4.js"></script>
+<script src="../assets/js/jquery-weui.min.js"></script>
+<script>
+    
+// 举报，加入黑名单
+$(function () {
+    $(".header-right").on("click", ".more_icon", function (e) {
+        $(".right_menu").slideToggle(200);
+    })
+    $(document).bind("click", function (e) {
+        var flas = $(".right_menu").css("display");
+        if (flas === "block") {
+            if ($(e.target).closest(".header-right").length === 0) {
+                $(".right_menu").slideToggle(200);
+            }
+        }
+
+    });
+
+    $("#report").on("click", function () {
+        $.actions({
+            onClose: function () {
+                console.log("close");
+            },
+            actions: [
+                {
+                    text: "淫秽色情",
+                    onClick: function () {
+                        $.alert("举报内容‘淫秽色情’", "举报已提交");
+                    }
+                },
+                {
+                    text: "政治反动",
+                    onClick: function () {
+                        $.alert("举报内容‘政治反动’", "举报已提交");
+                    }
+                },
+                {
+                    text: "恶意谩骂",
+                    onClick: function () {
+                        $.alert("举报内容‘恶意谩骂’", "举报已提交");
+                    }
+                },
+                {
+                    text: "违法犯罪",
+                    onClick: function () {
+                        $.alert("举报内容‘违法犯罪’", "举报已提交");
+                    }
+                },
+                {
+                    text: "虚假信息",
+                    onClick: function () {
+                        $.alert("举报内容‘虚假信息’", "举报已提交");
+                    }
+                },
+                {
+                    text: "其他",
+                    onClick: function () {
+                        $.alert("举报内容‘其他’", "举报已提交");
+                    }
+                }
+            ]
+        });
+    })
+
+    $("#blacklist").on("click", function () {
+        $.confirm({
+            title: '加入黑名单',
+            text: '你将不再收到对方发布的任何消息',
+            onOK: function () {
+                //点击确认
+            },
+            onCancel: function () {
+            }
+        });
+    })
+
+})
+</script>
+<script>
+    $(function () {
+        $("input[name='radio1']").change(function(){
+            console.log($(this).data("index"));
+            if($(this).data("index") == 2){
+                $(".ti-type").hide();
+            }
+            else {
+                $(".ti-type").show();
+            }
+        })
+    });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

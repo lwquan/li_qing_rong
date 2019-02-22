@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+<link rel="stylesheet" href="../assets/css/zpui.css"/>
+<link rel="stylesheet" href="../assets/css/all.css"/>
+<script src="../assets/js/page.js"></script>
+
+  <title> 收货地址 </title>
+  <style>
+    .weui-label{
+      width: 60px;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="page-hd">
+    <div class="header">
+    <div class="header-left">
+        <a href="javascript:history.go(-1)" class="left-arrow"></a>
+    </div>
+    <div class="header-title">收货地址</div>
+    <div class="header-right">
+        <div class="right_menu">
+            
+        </div>
+    </div>
+</div>
+  </div>
+
+  <div class="page-bd">
+    <!-- 页面内容-->
+    <div class="weui-cells card-cells">
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-flex" style="justify-content: space-between;">
+            <div><label class="weui-label">谢明华</label></div>
+            <div>187****4562</div>
+          </div>
+          <div class="fs24 text-gray mt10">广东省 广州市 天河区 天河北路都市华庭201号</div>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__bd tr">
+          <div class="action_group">
+            <a href="#" class="action_edit"><i class="icon_edit"></i><span>编辑</span></a>
+            <a href="#" class="action_del js_del"><i class="icon_del"></i><span>删除</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="weui-cells card-cells">
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-flex" style="justify-content: space-between;">
+            <div><label class="weui-label">谢明华</label></div>
+            <div>187****4562</div>
+          </div>
+          <div class="fs24 text-gray mt10">广东省 广州市 天河区 天河北路都市华庭201号</div>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__bd tr">
+          <div class="action_group">
+            <a href="#" class="action_edit"><i class="icon_edit"></i><span>编辑</span></a>
+            <a href="#" class="action_del js_del"><i class="icon_del"></i><span>删除</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-btn-wrap1">
+      <div class="bottom-btn">
+        <a href="新建地址.html" class="weui-btn weui-btn_primary"><span class="mr10">+</span>新建地址</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/js/lib/jquery-2.1.4.js"></script>
+<script src="../assets/js/jquery-weui.min.js"></script>
+<script>
+    
+// 举报，加入黑名单
+$(function () {
+    $(".header-right").on("click", ".more_icon", function (e) {
+        $(".right_menu").slideToggle(200);
+    })
+    $(document).bind("click", function (e) {
+        var flas = $(".right_menu").css("display");
+        if (flas === "block") {
+            if ($(e.target).closest(".header-right").length === 0) {
+                $(".right_menu").slideToggle(200);
+            }
+        }
+
+    });
+
+    $("#report").on("click", function () {
+        $.actions({
+            onClose: function () {
+                console.log("close");
+            },
+            actions: [
+                {
+                    text: "淫秽色情",
+                    onClick: function () {
+                        $.alert("举报内容‘淫秽色情’", "举报已提交");
+                    }
+                },
+                {
+                    text: "政治反动",
+                    onClick: function () {
+                        $.alert("举报内容‘政治反动’", "举报已提交");
+                    }
+                },
+                {
+                    text: "恶意谩骂",
+                    onClick: function () {
+                        $.alert("举报内容‘恶意谩骂’", "举报已提交");
+                    }
+                },
+                {
+                    text: "违法犯罪",
+                    onClick: function () {
+                        $.alert("举报内容‘违法犯罪’", "举报已提交");
+                    }
+                },
+                {
+                    text: "虚假信息",
+                    onClick: function () {
+                        $.alert("举报内容‘虚假信息’", "举报已提交");
+                    }
+                },
+                {
+                    text: "其他",
+                    onClick: function () {
+                        $.alert("举报内容‘其他’", "举报已提交");
+                    }
+                }
+            ]
+        });
+    })
+
+    $("#blacklist").on("click", function () {
+        $.confirm({
+            title: '加入黑名单',
+            text: '你将不再收到对方发布的任何消息',
+            onOK: function () {
+                //点击确认
+            },
+            onCancel: function () {
+            }
+        });
+    })
+
+})
+</script>
+<script>
+  $(function () {
+    $("#city-picker").cityPicker();
+  });
+</script>
+</body>
+</html>

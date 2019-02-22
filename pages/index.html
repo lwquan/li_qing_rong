@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+<link rel="stylesheet" href="../assets/css/zpui.css"/>
+<link rel="stylesheet" href="../assets/css/all.css"/>
+<script src="../assets/js/page.js"></script>
+
+    <title>红包卷</title>
+    <style>
+        .weui-dialog__btn  {
+            font-size: 0.213333rem!important;
+            color: #fd5240!important;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="page-hd">
+        <div class="header">
+            <div class="header-left" style="width: auto">
+                <a href="javascript:history.go(-1)" class="left-arrow"></a>
+            </div>
+            <div class="header-title">红包券</div>
+        </div>
+    </div>
+    <div class="page-bd" style="background-color: #f8f8f8;" id="style_hbj">
+        <!-- 页面内容-->
+        <div class="weui-tab">
+            <div class="weui-navbar fw500" style="z-index: 10;">
+                <a class="weui-navbar__item weui-bar__item--on" href="#tab1">
+                    已核销
+                </a>
+                <a class="weui-navbar__item" href="#tab2">
+                    可使用
+                </a>
+                <a class="weui-navbar__item" href="#tab3">
+                    已失效
+                </a>
+            </div>
+            <div class="weui-tab__bd sj_bd">
+                <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active" style="width: 93%;margin: 0 auto">
+                    <div class="weui-cells border-after-none" style="background-color: transparent">
+                        <a href="#" class="weui-media-box weui-media-box_appmsg weui-cell_access b_radio15 mb25 bs10" style="background:#fff;margin:1%;">
+                            <div class="weui-media-box__hd">
+                                <div class="avatar">
+                                    <img src="../assets/images/tx00.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="weui-media-box__bd">
+                                <h4 class="weui-media-box__title fw500 fs28">阿迪达斯(中国)运动用品有限公司</h4>
+                                <p class="weui-media-box__desc">有效期至2018.08.20</p>
+                            </div>
+                            <div class="weui-cell__ft border-after-none pr0">
+                                <div class="fs26 text-default fw500 fs30 ff">￥<span class="fs45">50</span></div>
+                                <div class="fs24 text-gray text-gray_active">可使用</div>
+                            </div>
+                        </a>
+                        <a href="#" class="weui-media-box weui-media-box_appmsg weui-cell_access b_radio15 mb25 bs10" style="background:#fff;margin:1%;">
+                            <div class="weui-media-box__hd">
+                                <div class="avatar">
+                                    <img src="../assets/images/tx00.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="weui-media-box__bd">
+                                <h4 class="weui-media-box__title fw500 fs28">阿迪达斯(中国)运动用品有限公司</h4>
+                                <p class="weui-media-box__desc">有效期至2018.08.20</p>
+                            </div>
+                            <div class="weui-cell__ft border-after-none pr0">
+                                <div class="fs26 text-default fw500 fs30 ff">￥<span class="fs45">50</span></div>
+                                <div class="fs24 text-gray">已核销
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="weui-media-box weui-media-box_appmsg weui-cell_access b_radio15 mb25 bs10" style="background:#fff;margin:1%;">
+                            <div class="weui-media-box__hd">
+                                <div class="avatar">
+                                    <img src="../assets/images/tx00.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="weui-media-box__bd">
+                                <h4 class="weui-media-box__title fw500 fs28">阿迪达斯(中国)运动用品有限公司</h4>
+                                <p class="weui-media-box__desc">有效期至2018.08.20</p>
+                            </div>
+                            <div class="weui-cell__ft border-after-none pr0">
+                                <div class="fs26 text-default fw500 fs30 ff">￥<span class="fs45">50</span></div>
+                                <div class="fs24 text-gray">已过期</div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div id="tab2" class="weui-tab__bd-item">
+                    2222
+                </div>
+                <div id="tab3" class="weui-tab__bd-item">333</div>
+            </div>
+        </div>
+    </div>
+    <div id="half" class="weui-popup__container popup-bottom">
+        <div class="weui-popup__overlay"></div>
+
+        <div class="weui-picker-modal weui-select-modal weui-picker-modal-visible" style="z-index: 999">
+
+            <div class="weui-cells weui-cells_radio" style="text-align: center">
+                <label class="weui-cell weui-check_label" for="weui-select-id-1">
+                    <div class="weui-cell__bd weui-cell_primary fs30"><p>商家红包券</p></div>
+
+                </label>
+                <label class="weui-cell weui-check_label" for="weui-select-id-2">
+                    <div class="weui-cell__bd weui-cell_primary fs30"><p>个人红包券</p></div>
+
+                </label>
+                <label id="close_btn1" class="weui-cell weui-check_label" for="weui-select-id-3" style="border-top:10px solid #f8f8f8">
+                    <div class="weui-cell__bd weui-cell_primary fs30"><p>取消</p></div>
+                </label>
+            </div>
+        </div>
+
+    </div>
+    <!--<div class="bottom-tabbar">-->
+    <!--<a href="我要订货.html" class="bottom-tabbar__item ">-->
+        <!--<span class="icon">-->
+            <!--<img src="../assets/images/bottom_icon01.png" />-->
+            <!--<img class="lhimg" src="../assets/images/bottom_icon01_lh.png" />-->
+        <!--</span>-->
+        <!--<p class="label">我要订货</p>-->
+    <!--</a>-->
+    <!--<a href="商品发货.html" class="bottom-tabbar__item ">-->
+        <!--<span class="icon">-->
+            <!--<img src="../assets/images/bottom_icon02.png" />-->
+            <!--<img class="lhimg" src="../assets/images/bottom_icon02_lh.png" />-->
+        <!--</span>-->
+        <!--<p class="label">扫码发货</p>-->
+    <!--</a>-->
+    <!--<a href="货单列表.html" class="bottom-tabbar__item active">-->
+        <!--<span class="icon">-->
+            <!--<img src="../assets/images/bottom_icon03.png" />-->
+            <!--<img class="lhimg" src="../assets/images/bottom_icon03_lh.png" />-->
+        <!--</span>-->
+        <!--<p class="label">我的订单</p>-->
+    <!--</a>-->
+    <!--<a href="个人中心.html" class="bottom-tabbar__item @@item4">-->
+        <!--<span class="icon">-->
+            <!--<img src="../assets/images/bottom_icon04.png" />-->
+            <!--<img class="lhimg" src="../assets/images/bottom_icon04_lh.png" />-->
+        <!--</span>-->
+        <!--<p class="label">我的</p>-->
+    <!--</a>-->
+<!--</div>-->
+<div class="bottom-tabbar">
+    <a href="收红包.html" class="bottom-tabbar__item ">
+            <span class="icon">
+                <img src="../assets/images/bottom_icon01.png" />
+                <img class="lhimg" src="../assets/images/bottom_icon01_lh.png" />
+            </span>
+        <p class="label">收红包</p>
+    </a>
+    <a href="钱包.html" class="bottom-tabbar__item ">
+            <span class="icon">
+                <img src="../assets/images/bottom_icon05.png" />
+                <img class="lhimg" src="../assets/images/bottom_icon05_lh.png" />
+            </span>
+        <p class="label">钱包</p>
+    </a>
+    <a href="c红包卷.html" class="bottom-tabbar__item active">
+            <span class="icon">
+                <img src="../assets/images/bottom_icon06.png" />
+                <img class="lhimg" src="../assets/images/bottom_icon06_lh.png" />
+            </span>
+        <p class="label">红包券</p>
+    </a>
+</div>
+</div>
+
+<script src="../assets/js/lib/jquery-2.1.4.js"></script>
+<script src="../assets/js/jquery-weui.min.js"></script>
+<script>
+    
+// 举报，加入黑名单
+$(function () {
+    $(".header-right").on("click", ".more_icon", function (e) {
+        $(".right_menu").slideToggle(200);
+    })
+    $(document).bind("click", function (e) {
+        var flas = $(".right_menu").css("display");
+        if (flas === "block") {
+            if ($(e.target).closest(".header-right").length === 0) {
+                $(".right_menu").slideToggle(200);
+            }
+        }
+
+    });
+
+    $("#report").on("click", function () {
+        $.actions({
+            onClose: function () {
+                console.log("close");
+            },
+            actions: [
+                {
+                    text: "淫秽色情",
+                    onClick: function () {
+                        $.alert("举报内容‘淫秽色情’", "举报已提交");
+                    }
+                },
+                {
+                    text: "政治反动",
+                    onClick: function () {
+                        $.alert("举报内容‘政治反动’", "举报已提交");
+                    }
+                },
+                {
+                    text: "恶意谩骂",
+                    onClick: function () {
+                        $.alert("举报内容‘恶意谩骂’", "举报已提交");
+                    }
+                },
+                {
+                    text: "违法犯罪",
+                    onClick: function () {
+                        $.alert("举报内容‘违法犯罪’", "举报已提交");
+                    }
+                },
+                {
+                    text: "虚假信息",
+                    onClick: function () {
+                        $.alert("举报内容‘虚假信息’", "举报已提交");
+                    }
+                },
+                {
+                    text: "其他",
+                    onClick: function () {
+                        $.alert("举报内容‘其他’", "举报已提交");
+                    }
+                }
+            ]
+        });
+    })
+
+    $("#blacklist").on("click", function () {
+        $.confirm({
+            title: '加入黑名单',
+            text: '你将不再收到对方发布的任何消息',
+            onOK: function () {
+                //点击确认
+            },
+            onCancel: function () {
+            }
+        });
+    })
+
+})
+</script>
+
+<script>
+
+
+</script>
+</body>
+</html>

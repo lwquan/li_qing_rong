@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+<link rel="stylesheet" href="../assets/css/zpui.css"/>
+<link rel="stylesheet" href="../assets/css/all.css"/>
+<script src="../assets/js/page.js"></script>
+
+    <title> 提交投诉 </title>
+</head>
+<body>
+<div class="page">
+    <div class="page-hd">
+        <div class="header">
+    <div class="header-left">
+        <a href="javascript:history.go(-1)" class="left-arrow"></a>
+    </div>
+    <div class="header-title">提交投诉</div>
+    <div class="header-right">
+        <div class="right_menu">
+            
+        </div>
+    </div>
+</div>
+    </div>
+    <div class="page-bd">
+        <!-- 页面内容-->
+        <div class="weui-cells mt0">
+            <div class="weui-cells__title bor-1px-b pt30 pb30 fs28" style="margin: 0px;">
+                <span>请填写投诉内容</span>
+            </div>
+            <div class="weui-cells__tips pd0">
+                <div class="weui-cell" style="align-items: baseline;">
+                    <div class="weui-cell__hd mr30">
+                        <span style="color: #333333;" class="fs26">投诉内容</span>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <textarea class="weui-textarea" placeholder="请填写详细的投诉内容，最少填写30个字以上" rows="6"></textarea>
+                        <div class="weui-textarea-counter"><span>0</span>/200</div>
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd mr30">
+                        <span style="color: #333333;" class="fs26">上传截图</span>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <ul class="weui-uploader__files" id="uploaderFiles">
+                            <li class="weui-uploader__file" style="background-image:url(../assets/images/icon_3.png)">
+
+                            </li>
+                        </ul>
+                        <div class="weui-uploader__input-box border-radius10" style="border-style: solid;">
+                            <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="pd30" style="color: #575757;">请如实填写投诉内容，我们核实后第一时间对该会员进行处理，感谢您对我们的支持！</p>
+        <div class="weui-btn-area">
+            <a href="提交投诉.html" class="weui-btn weui-btn_primary bg-danger">提交投诉</a>
+        </div>
+        <div class="fixed_style1">
+            <a href="首页.html" class="weui-btn weui-btn_plain-primary weui-btn_class1">首页</a>
+        </div>
+
+    </div>
+    <script src="../assets/js/lib/jquery-2.1.4.js"></script>
+<script src="../assets/js/jquery-weui.min.js"></script>
+<script>
+    
+// 举报，加入黑名单
+$(function () {
+    $(".header-right").on("click", ".more_icon", function (e) {
+        $(".right_menu").slideToggle(200);
+    })
+    $(document).bind("click", function (e) {
+        var flas = $(".right_menu").css("display");
+        if (flas === "block") {
+            if ($(e.target).closest(".header-right").length === 0) {
+                $(".right_menu").slideToggle(200);
+            }
+        }
+
+    });
+
+    $("#report").on("click", function () {
+        $.actions({
+            onClose: function () {
+                console.log("close");
+            },
+            actions: [
+                {
+                    text: "淫秽色情",
+                    onClick: function () {
+                        $.alert("举报内容‘淫秽色情’", "举报已提交");
+                    }
+                },
+                {
+                    text: "政治反动",
+                    onClick: function () {
+                        $.alert("举报内容‘政治反动’", "举报已提交");
+                    }
+                },
+                {
+                    text: "恶意谩骂",
+                    onClick: function () {
+                        $.alert("举报内容‘恶意谩骂’", "举报已提交");
+                    }
+                },
+                {
+                    text: "违法犯罪",
+                    onClick: function () {
+                        $.alert("举报内容‘违法犯罪’", "举报已提交");
+                    }
+                },
+                {
+                    text: "虚假信息",
+                    onClick: function () {
+                        $.alert("举报内容‘虚假信息’", "举报已提交");
+                    }
+                },
+                {
+                    text: "其他",
+                    onClick: function () {
+                        $.alert("举报内容‘其他’", "举报已提交");
+                    }
+                }
+            ]
+        });
+    })
+
+    $("#blacklist").on("click", function () {
+        $.confirm({
+            title: '加入黑名单',
+            text: '你将不再收到对方发布的任何消息',
+            onOK: function () {
+                //点击确认
+            },
+            onCancel: function () {
+            }
+        });
+    })
+
+})
+</script>
+    <script>
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

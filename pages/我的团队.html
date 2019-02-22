@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+<link rel="stylesheet" href="../assets/css/zpui.css"/>
+<link rel="stylesheet" href="../assets/css/all.css"/>
+<script src="../assets/js/page.js"></script>
+
+    <title> 我的团队 </title>
+    <style>
+        .weui-btn_class1 {
+            background-color: #f7f7f7;
+            border: solid 1px #eeeeee;
+            color: #333333;
+        }
+
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="page-hd">
+        <div class="header">
+    <div class="header-left">
+        <a href="javascript:history.go(-1)" class="left-arrow"></a>
+    </div>
+    <div class="header-title">我的团队</div>
+    <div class="header-right">
+        <div class="right_menu">
+            
+        </div>
+    </div>
+</div>
+    </div>
+    <div class="page-bd">
+        <!-- 页面内容-->
+        <div class="weui-cells bg-fff">
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <a href="javascript:;" class="weui-btn_class1 border-radius10 weui-btn_active">全部</a>
+                    <a href="javascript:;" class="weui-btn_class1 border-radius10">普通</a>
+                    <a href="javascript:;" class="weui-btn_class1 border-radius10">直推荐</a>
+                </div>
+                <div class="weui-cell__bd">
+                    <div class="select-btn" onclick="$('#select-box').popup();">
+                        请选择
+                    </div>
+                </div>
+            </div>
+            <div class="weui-cell" style="flex-flow: column;">
+                <div class="weui-cell__hd w100">
+                    <p>团队人数：<span>1</span>人</p>
+                </div>
+                <div class="weui-cell__bd w100">
+                    <p class="mt20">姓名：<span>admin</span></p>
+                    <p class="mt20">等级：<span>普通会员</span></p>
+                    <p class="mt20">手机：<span>18025122536</span></p>
+                    <p class="mt20">微信：<span>liu514556551</span><a href="javascript:;" class="weui-btn_class2 ml15"
+                                                                   style="">复制</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div id="select-box" class="weui-popup__container popup-bottom">-->
+    <div id="select-box" class="weui-popup__container popup-bottom">
+        <div class="weui-mask weui-mask--visible"></div>
+        <div class="weui-dialog weui-dialog--visible">
+            <div class="weui-dialog__bd pt0 pb15">
+                <div class="select-box_ctn">
+                    <div class="weui-cells weui-cells_checkbox border-none">
+                        <label class="weui-cell weui-check__label pr0" for="s11">
+                            <div class="weui-cell__bd">
+                                <p>请选择</p>
+                            </div>
+                            <div class="weui-cell__hd">
+                                <input type="radio" class="weui-check" name="radio1" id="s11" checked="checked">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+                        </label>
+                        <label class="weui-cell weui-check__label pr0" for="s12">
+                            <div class="weui-cell__bd">
+                                <p>一星会员</p>
+                            </div>
+                            <div class="weui-cell__hd">
+                                <input type="radio" class="weui-check" name="radio1" id="s12">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+                        </label>
+                        <label class="weui-cell weui-check__label pr0" for="s13">
+                            <div class="weui-cell__bd">
+                                <p>二星会员</p>
+                            </div>
+                            <div class="weui-cell__hd">
+                                <input type="radio" class="weui-check" name="radio1" id="s13">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+                        </label>
+                        <label class="weui-cell weui-check__label pr0" for="s14">
+                            <div class="weui-cell__bd">
+                                <p>三星会员</p>
+                            </div>
+                            <div class="weui-cell__hd">
+                                <input type="radio" class="weui-check" name="radio1" id="s14">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+                        </label>
+                        <label class="weui-cell weui-check__label pr0" for="s15">
+                            <div class="weui-cell__bd">
+                                <p>四星会员</p>
+                            </div>
+                            <div class="weui-cell__hd">
+                                <input type="radio" class="weui-check" name="radio1" id="s15">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+                        </label>
+                        <label class="weui-cell weui-check__label pr0" for="s16">
+                            <div class="weui-cell__bd">
+                                <p>五星会员</p>
+                            </div>
+                            <div class="weui-cell__hd">
+                                <input type="radio" class="weui-check" name="radio1" id="s16">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+                        </label>
+                        <label class="weui-cell weui-check__label pr0" for="s17">
+                            <div class="weui-cell__bd">
+                                <p>六星会员</p>
+                            </div>
+                            <div class="weui-cell__hd">
+                                <input type="radio" class="weui-check" name="radio1" id="s17">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+                        </label>
+                        <label class="weui-cell weui-check__label pr0" for="s18">
+                            <div class="weui-cell__bd">
+                                <p>七星会员</p>
+                            </div>
+                            <div class="weui-cell__hd">
+                                <input type="radio" class="weui-check" name="radio1" id="s18">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+                        </label>
+                        <label class="weui-cell weui-check__label pr0" for="s19">
+                            <div class="weui-cell__bd">
+                                <p>八星会员</p>
+                            </div>
+                            <div class="weui-cell__hd">
+                                <input type="radio" class="weui-check" name="radio1" id="s19">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+                        </label>
+                        <label class="weui-cell weui-check__label pr0" for="s20">
+                            <div class="weui-cell__bd">
+                                <p>九星会员</p>
+                            </div>
+                            <div class="weui-cell__hd">
+                                <input type="radio" class="weui-check" name="radio1" id="s20">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="weui-dialog__ft">
+                <a href="javascript:;" class="weui-dialog__btn" onclick="$('#select-box').fadeOut();">取消</a>
+                <a href="javascript:;" class="weui-dialog__btn" onclick="$('#select-box').fadeOut();">确认</a>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/lib/jquery-2.1.4.js"></script>
+<script src="../assets/js/jquery-weui.min.js"></script>
+<script>
+    
+// 举报，加入黑名单
+$(function () {
+    $(".header-right").on("click", ".more_icon", function (e) {
+        $(".right_menu").slideToggle(200);
+    })
+    $(document).bind("click", function (e) {
+        var flas = $(".right_menu").css("display");
+        if (flas === "block") {
+            if ($(e.target).closest(".header-right").length === 0) {
+                $(".right_menu").slideToggle(200);
+            }
+        }
+
+    });
+
+    $("#report").on("click", function () {
+        $.actions({
+            onClose: function () {
+                console.log("close");
+            },
+            actions: [
+                {
+                    text: "淫秽色情",
+                    onClick: function () {
+                        $.alert("举报内容‘淫秽色情’", "举报已提交");
+                    }
+                },
+                {
+                    text: "政治反动",
+                    onClick: function () {
+                        $.alert("举报内容‘政治反动’", "举报已提交");
+                    }
+                },
+                {
+                    text: "恶意谩骂",
+                    onClick: function () {
+                        $.alert("举报内容‘恶意谩骂’", "举报已提交");
+                    }
+                },
+                {
+                    text: "违法犯罪",
+                    onClick: function () {
+                        $.alert("举报内容‘违法犯罪’", "举报已提交");
+                    }
+                },
+                {
+                    text: "虚假信息",
+                    onClick: function () {
+                        $.alert("举报内容‘虚假信息’", "举报已提交");
+                    }
+                },
+                {
+                    text: "其他",
+                    onClick: function () {
+                        $.alert("举报内容‘其他’", "举报已提交");
+                    }
+                }
+            ]
+        });
+    })
+
+    $("#blacklist").on("click", function () {
+        $.confirm({
+            title: '加入黑名单',
+            text: '你将不再收到对方发布的任何消息',
+            onOK: function () {
+                //点击确认
+            },
+            onCancel: function () {
+            }
+        });
+    })
+
+})
+</script>
+    <script>
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
